@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  h1= title
+  h2= message
+  if error && error.status
+    p Status: #{error.status}
+  if error && error.stack
+    pre #{error.stack}
